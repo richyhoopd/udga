@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 /* ─────────────── CONSTANTS ─────────────── */
-const WA_LINK = 'https://wa.me/523313013253?text=Hola%2C%20me%20interesa%20información%20sobre%20inversión%20inmobiliaria%20con%20UDGA%20Capital.';
-const PHONE_NUMBER = '+52 33 1301 3253';
+const WA_LINK = 'https://wa.me/523349687589?text=Hola%2C%20me%20interesa%20información%20sobre%20terrenos%20en%20aportación%20con%20UDGA%20Capital.';
+const PHONE_NUMBER = '33 4968 7589';
 const EMAIL = 'inversiones@udgacapital.com';
 
 /* ─────────────── ICONS (inline SVGs) ─────────────── */
@@ -215,10 +215,10 @@ function Navbar() {
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { src: '/hero-cityscape.png', alt: 'Desarrollo inmobiliario en Guadalajara' },
-    { src: '/tower.png', alt: 'Torre de desarrollo vertical' },
-    { src: '/warehouse.png', alt: 'Complejo logístico' },
-    { src: '/plaza.png', alt: 'Plaza comercial premium' },
+    { src: '/hero-cityscape.png', alt: 'Terrenos en aportación para desarrollo inmobiliario' },
+    { src: '/tower.png', alt: 'Terreno en aportación para desarrollo vertical' },
+    { src: '/warehouse.png', alt: 'Terreno en aportación para uso industrial' },
+    { src: '/plaza.png', alt: 'Terreno en aportación para plaza comercial' },
   ];
 
   useEffect(() => {
@@ -253,26 +253,28 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 pt-28 pb-16">
         <div className="max-w-3xl animate-slide-up">
           <div className="inline-block mb-6 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full">
-            <span className="text-gold-400 text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">Desarrollo Inmobiliario Premium</span>
+            <span className="text-gold-400 text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">Terrenos en Aportación</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
-            Inversión Inmobiliaria de{' '}
-            <span className="text-gradient-gold">Clase Mundial</span>
+            ¿Tienes un Terreno y{' '}
+            <span className="text-gradient-gold">No lo Puedes Vender?</span>
           </h1>
 
-          <p className="text-base md:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
-            UDGA Capital: <strong className="text-white">20+ años</strong> transformando visiones en proyectos inmobiliarios rentables. 
-            Aportaciones flexibles del <strong className="text-white">40% al 90%</strong> en Jalisco con retornos de <strong className="text-gold-400">12-22% anual</strong>.
+          <p className="text-base md:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
+            <strong className="text-white text-lg md:text-2xl">Invierte tu terreno en aportación.</strong>
+          </p>
+          <p className="text-base md:text-lg text-gray-400 max-w-2xl mb-8 leading-relaxed">
+            En UDGA Capital convertimos tu terreno en un proyecto de <strong className="text-white">plaza comercial, residencial, industrial o desarrollo vertical</strong> con aportaciones flexibles del <strong className="text-white">40% al 90%</strong> y retornos de <strong className="text-gold-400">12-22% anual</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
-            <a href="#contacto" className="btn-gold flex items-center gap-3 !px-8 !py-4 text-lg">
-              Solicitar Consultoría
-              <IconArrowRight />
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="btn-gold flex items-center gap-3 !px-8 !py-4 text-lg animate-pulse-gold">
+              <IconPhone className="w-6 h-6" />
+              Contáctanos por WhatsApp
             </a>
             <a href="#portafolio" className="btn-outline-gold !border-white/20 !text-white hover:!bg-white/5 hover:!border-gold-500 hover:!text-gold-400 flex items-center gap-2 !px-8 !py-4">
-              Explorar Proyectos
+              Ver Proyectos
               <IconChevronDown />
             </a>
           </div>
@@ -280,9 +282,9 @@ function Hero() {
           {/* Stats Row */}
           <div className="grid grid-cols-3 gap-6 max-w-lg">
             {[
-              { num: '20+', label: 'Años en Mercado' },
-              { num: '$2.5B', label: 'Inversión Total' },
-              { num: '98%', label: 'Satisfacción' },
+              { num: '20+', label: 'Años de Experiencia' },
+              { num: '4', label: 'Tipos de Desarrollo' },
+              { num: '40-90%', label: 'Aportación Flexible' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="font-display text-3xl md:text-4xl font-bold text-gradient-gold">{stat.num}</div>
@@ -310,33 +312,79 @@ function Hero() {
   );
 }
 
+/* ─────────────── TERRENO CTA BANNER ─────────────── */
+function TerrenoBanner() {
+  const [ref, inView] = useInView();
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-r from-dark-900 via-dark-800 to-dark-900 py-16 md:py-20" ref={ref}>
+      {/* Gold accent glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gold-500/[0.06] rounded-full blur-3xl" />
+      <div className={`relative max-w-5xl mx-auto px-4 md:px-8 text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className="inline-block mb-6 px-5 py-2 bg-gold-500/20 border border-gold-500/30 rounded-full">
+          <span className="text-gold-400 text-sm font-bold tracking-[0.15em] uppercase">Terrenos en Aportación</span>
+        </div>
+        <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mb-6">
+          ¿Tienes un terreno de cualquier medida <br className="hidden md:block" />
+          y <span className="text-gradient-gold">no lo puedes vender</span>?
+        </h2>
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
+          No lo dejes parado. <strong className="text-white">Puedes invertirlo en aportación</strong> y obtener rendimientos a través de un desarrollo inmobiliario.
+        </p>
+        <p className="text-base text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Desarrollamos <strong className="text-gold-400">plazas comerciales</strong>, <strong className="text-gold-400">proyectos residenciales</strong>, <strong className="text-gold-400">naves industriales</strong> y <strong className="text-gold-400">desarrollo vertical</strong> sobre tu terreno.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href={WA_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold flex items-center gap-3 !px-10 !py-4 text-lg animate-pulse-gold"
+          >
+            <IconPhone className="w-6 h-6" />
+            Escríbenos por WhatsApp
+          </a>
+          <a href={`tel:+523349687589`} className="flex items-center gap-2 text-gray-300 hover:text-gold-400 transition-colors text-lg font-semibold">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+            </svg>
+            {PHONE_NUMBER}
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─────────────── PORTFOLIO SECTION ─────────────── */
 function PortfolioSection() {
   const [ref, inView] = useInView();
   const projects = [
     {
-      icon: <IconWarehouse />,
-      title: 'Terrenos en Aportación para Bodegas',
-      description: 'Soluciones logísticas de clase mundial con ubicaciones estratégicas en corredores comerciales de Jalisco. Proyectos de 5,000 a 50,000 m² con acceso a principales vías de comunicación.',
-      aportacion: '40% - 90%',
-      roi: '12-18% anual',
-      image: '/warehouse.png',
-    },
-    {
-      icon: <IconBuilding />,
-      title: 'Desarrollo Vertical Residencial y Corporativo',
-      description: 'Torres mixtas de vivienda y oficinas en zonas de alto valor. Proyectos de 15 a 35 pisos con certificación LEED y amenidades premium para máxima rentabilidad.',
-      aportacion: '40% - 90%',
-      roi: '15-22% anual',
-      image: '/tower.png',
-    },
-    {
       icon: <IconShoppingBag />,
-      title: 'Plazas Comerciales y Centros Retail',
-      description: 'Centros comerciales de 20,000 a 100,000 m² con mix comercial diversificado. Ubicaciones premium en zonas de alto tráfico con potencial de ocupación del 95%+.',
+      title: 'Terreno en Aportación para Plaza Comercial',
+      description: '¿Tienes un terreno en zona de alto tráfico? Conviértelo en una plaza comercial rentable. Desarrollamos centros retail de 20,000 a 100,000 m² con ocupación del 95%+.',
       aportacion: '40% - 90%',
       roi: '14-20% anual',
       image: '/plaza.png',
+      tag: 'Comercial',
+    },
+    {
+      icon: <IconBuilding />,
+      title: 'Terreno en Aportación para Desarrollo Vertical',
+      description: '¿Tu terreno está en zona urbana de alto valor? Aporta tu terreno para torres residenciales o corporativas de 15 a 35 pisos con amenidades premium.',
+      aportacion: '40% - 90%',
+      roi: '15-22% anual',
+      image: '/tower.png',
+      tag: 'Residencial / Vertical',
+    },
+    {
+      icon: <IconWarehouse />,
+      title: 'Terreno en Aportación para Nave Industrial',
+      description: '¿Tienes un terreno en corredor logístico? Transfórmalo en bodegas o naves industriales de clase mundial. Proyectos de 5,000 a 50,000 m² en ubicaciones estratégicas.',
+      aportacion: '40% - 90%',
+      roi: '12-18% anual',
+      image: '/warehouse.png',
+      tag: 'Industrial',
     },
   ];
 
@@ -344,13 +392,13 @@ function PortfolioSection() {
     <section id="portafolio" className="section-padding bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Portafolio de Inversión</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Terrenos en Aportación</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            Proyectos Estratégicos
+            ¿Para Qué Tipo de Desarrollo?
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Diversificación inmobiliaria con retornos competitivos y control total sobre tu inversión
+            Tu terreno puede convertirse en un proyecto de alto rendimiento. Elige el tipo de desarrollo que mejor se adapte a tu propiedad.
           </p>
         </div>
 
@@ -369,6 +417,9 @@ function PortfolioSection() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 to-transparent" />
+                <div className="absolute top-4 left-4 px-3 py-1 bg-gold-500/20 backdrop-blur-sm border border-gold-500/30 rounded-full">
+                  <span className="text-gold-400 text-xs font-semibold">{project.tag}</span>
+                </div>
                 <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-gold-500/20 backdrop-blur-sm flex items-center justify-center text-gold-400">
                   {project.icon}
                 </div>
@@ -399,9 +450,10 @@ function PortfolioSection() {
                   href={WA_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gold-600 font-semibold hover:text-gold-500 transition-colors group/link text-sm"
+                  className="inline-flex items-center gap-2 text-[#25D366] font-semibold hover:text-[#1da851] transition-colors group/link text-sm"
                 >
-                  Solicitar información
+                  <IconPhone className="w-4 h-4" />
+                  Consultar por WhatsApp
                   <span className="group-hover/link:translate-x-1 transition-transform"><IconArrowRight className="w-4 h-4" /></span>
                 </a>
               </div>
@@ -459,13 +511,13 @@ function CompletedProjects() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Portafolio de Éxito</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Terrenos que ya Fueron Aportados</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mt-3 mb-5">
-            Proyectos Completados
+            Proyectos Realizados en Aportación
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Galería de proyectos inmobiliarios exitosos que demuestran nuestra experiencia y capacidad
+            Terrenos que propietarios como tú decidieron invertir en aportación y hoy generan rendimientos
           </p>
         </div>
 
@@ -553,11 +605,11 @@ function AdvantageSection() {
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Ventaja Competitiva</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            ¿Por Qué Elegir UDGA Capital?
+            ¿Por Qué Aportar tu Terreno con UDGA?
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Modelo de inversión flexible que redefine el mercado inmobiliario mexicano
+            En lugar de dejar tu terreno sin producir, conviértelo en un desarrollo rentable con nuestro modelo de aportación
           </p>
         </div>
 
@@ -679,13 +731,13 @@ function InvestmentModel() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Modelo de Inversión</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Modelo de Aportación de Terrenos</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mt-3 mb-5">
-            Aportación Flexible
+            ¿Cómo Funciona la Aportación?
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Elige el porcentaje que se ajuste a tu estrategia de inversión
+            Tu terreno se convierte en tu inversión. Elige el porcentaje de aportación que se ajuste a tu situación.
           </p>
         </div>
 
@@ -837,8 +889,8 @@ function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Build WhatsApp message from form data
-    const msg = `Hola, me interesa información sobre inversión inmobiliaria con UDGA Capital.%0A%0ANombre: ${formData.nombre}%0AEmail: ${formData.email}%0ATeléfono: ${formData.telefono}%0AInterés: ${formData.interes}%0AMensaje: ${formData.mensaje}`;
-    window.open(`https://wa.me/523313013253?text=${msg}`, '_blank');
+    const msg = `Hola, me interesa información sobre terrenos en aportación con UDGA Capital.%0A%0ANombre: ${formData.nombre}%0AEmail: ${formData.email}%0ATeléfono: ${formData.telefono}%0AInterés: ${formData.interes}%0AMensaje: ${formData.mensaje}`;
+    window.open(`https://wa.me/523349687589?text=${msg}`, '_blank');
   };
 
   return (
@@ -847,27 +899,35 @@ function ContactSection() {
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Próximo Paso</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            Inicia tu Inversión Hoy
+            Aporta tu Terreno Hoy
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Completa el formulario o contacta directamente a nuestro equipo de especialistas
+            Completa el formulario o escríbenos directo por <strong className="text-[#25D366]">WhatsApp</strong> para una consultoría personalizada
           </p>
         </div>
 
         <div className={`grid lg:grid-cols-5 gap-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
           {/* Contact Info */}
-          <div className="lg:col-span-2 space-y-8">
-            <div className="flex items-start gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center text-gold-600 flex-shrink-0">
-                <IconPhone className="w-6 h-6" />
+          <div className="lg:col-span-2 space-y-6">
+            {/* WhatsApp CTA - prominente */}
+            <a
+              href={WA_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-[#25D366]/10 border-2 border-[#25D366]/30 rounded-2xl p-6 hover:bg-[#25D366]/20 transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-2xl bg-[#25D366] flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <IconPhone className="w-8 h-8" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-dark-800 text-lg">WhatsApp — Respuesta Inmediata</h3>
+                  <p className="text-[#25D366] font-bold text-xl">{PHONE_NUMBER}</p>
+                  <p className="text-gray-500 text-sm mt-0.5">Escríbenos ahora y recibe asesoría personalizada</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-dark-800 mb-1">Teléfono</h3>
-                <p className="text-gold-600 font-semibold">{PHONE_NUMBER}</p>
-                <p className="text-gray-500 text-sm mt-0.5">Lunes a Viernes, 9:00 - 18:00 CST</p>
-              </div>
-            </div>
+            </a>
 
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 rounded-2xl bg-gold-500/10 flex items-center justify-center text-gold-600 flex-shrink-0">
@@ -937,7 +997,7 @@ function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Tipo de Inversión</label>
+                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Tipo de Desarrollo para tu Terreno</label>
                     <select
                       name="interes"
                       value={formData.interes}
@@ -945,10 +1005,11 @@ function ContactSection() {
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-800 text-sm focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all appearance-none"
                     >
                       <option value="">Seleccionar...</option>
-                      <option value="bodegas">Bodegas Logísticas</option>
+                      <option value="comercial">Plaza Comercial</option>
+                      <option value="residencial">Residencial</option>
+                      <option value="industrial">Industrial / Bodegas</option>
                       <option value="vertical">Desarrollo Vertical</option>
-                      <option value="comercial">Plazas Comerciales</option>
-                      <option value="otro">Otro</option>
+                      <option value="otro">Otro / No sé aún</option>
                     </select>
                   </div>
                 </div>
@@ -961,13 +1022,13 @@ function ContactSection() {
                     onChange={handleChange}
                     rows="4"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-800 text-sm focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all resize-none"
-                    placeholder="Cuéntanos sobre tu interés en inversión inmobiliaria..."
+                    placeholder="Describe tu terreno: ubicación, medidas, situación actual..."
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn-gold w-full flex items-center justify-center gap-3 !py-4 text-lg animate-pulse-gold">
-                  <IconPhone className="w-5 h-5" />
-                  Enviar Solicitud
+                <button type="submit" className="w-full flex items-center justify-center gap-3 !py-4 text-lg font-bold rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5" style={{ backgroundColor: '#25D366' }}>
+                  <IconPhone className="w-6 h-6" />
+                  Enviar por WhatsApp
                 </button>
               </form>
             </div>
@@ -990,7 +1051,7 @@ function Footer() {
               <img src="/udga_logo_white.png" alt="UDGA Capital" className="h-14 w-auto" />
             </div>
             <p className="text-gray-500 leading-relaxed max-w-md mt-4">
-              Expertos en desarrollo inmobiliario con 20+ años transformando visiones en realidades rentables. Aportaciones flexibles 40-90%.
+              Especialistas en terrenos en aportación. 20+ años transformando terrenos improductivos en desarrollos inmobiliarios rentables.
             </p>
           </div>
 
@@ -998,7 +1059,7 @@ function Footer() {
           <div>
             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">Servicios</h4>
             <ul className="space-y-2 text-sm">
-              {['Bodegas Logísticas', 'Desarrollo Vertical', 'Plazas Comerciales'].map((s, i) => (
+              {['Plaza Comercial', 'Residencial', 'Industrial', 'Desarrollo Vertical'].map((s, i) => (
                 <li key={i}>
                   <a href="#portafolio" className="hover:text-gold-500 transition-colors">{s}</a>
                 </li>
@@ -1063,11 +1124,20 @@ function FloatingWhatsApp() {
       href={WA_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300"
-      style={{ boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)' }}
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group"
       aria-label="WhatsApp"
     >
-      <IconPhone className="w-7 h-7" />
+      {/* Label */}
+      <span className="hidden sm:block bg-white text-dark-800 font-bold text-sm px-4 py-2.5 rounded-full shadow-xl border border-gray-100 group-hover:scale-105 transition-transform">
+        ¿Tienes un terreno? 💬
+      </span>
+      {/* Button */}
+      <div
+        className="w-16 h-16 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 animate-bounce-slow"
+        style={{ boxShadow: '0 4px 20px rgba(37, 211, 102, 0.4)' }}
+      >
+        <IconPhone className="w-7 h-7" />
+      </div>
     </a>
   );
 }
@@ -1078,6 +1148,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
+      <TerrenoBanner />
       <PortfolioSection />
       <CompletedProjects />
       <AdvantageSection />
