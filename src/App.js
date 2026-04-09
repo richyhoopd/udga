@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 /* ─────────────── CONSTANTS ─────────────── */
-const WA_LINK = 'https://wa.me/523349687589?text=Hola%2C%20me%20interesa%20información%20sobre%20terrenos%20en%20aportación%20con%20UDGA%20Capital.';
+const WA_LINK = 'https://wa.me/523349687589?text=Hola%2C%20soy%20desarrollador%20y%20me%20interesan%20los%20terrenos%20en%20aportaci%C3%B3n%20de%20UDG%C3%85%20Capital.';
 const PHONE_NUMBER = '33 4968 7589';
 const EMAIL = 'inversiones@udgacapital.com';
 
@@ -137,7 +137,7 @@ function Navbar() {
         <a href="#inicio" className="flex items-center group">
           <img
             src={scrolled ? "/udga_logo_black.png" : "/udga_logo_white.png"}
-            alt="UDGA Capital"
+            alt="UDGÅ Capital"
             className="h-16 w-auto transition-all duration-300"
           />
         </a>
@@ -253,19 +253,19 @@ function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 md:px-8 pt-28 pb-16">
         <div className="max-w-3xl animate-slide-up">
           <div className="inline-block mb-6 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full">
-            <span className="text-gold-400 text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">Terrenos en Aportación</span>
+            <span className="text-gold-400 text-xs sm:text-sm font-semibold tracking-[0.15em] uppercase">Terrenos en Aportación para Desarrolladores</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6">
-            ¿Tienes un Terreno y{' '}
-            <span className="text-gradient-gold">No lo Puedes Vender?</span>
+            Terrenos en aportación{' '}
+            <span className="text-gradient-gold">desde el 50% hasta el 95%</span>
           </h1>
-
+{/* 
           <p className="text-base md:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
-            <strong className="text-white text-lg md:text-2xl">Invierte tu terreno en aportación.</strong>
-          </p>
+            <strong className="text-white text-lg md:text-2xl">Terrenos listos para tu próximo desarrollo.</strong>
+          </p> */}
           <p className="text-base md:text-lg text-gray-400 max-w-2xl mb-8 leading-relaxed">
-            En UDGA Capital convertimos tu terreno en un proyecto de <strong className="text-white">plaza comercial, residencial, industrial o desarrollo vertical</strong> con aportaciones flexibles del <strong className="text-white">40% al 90%</strong> y retornos de <strong className="text-gold-400">12-22% anual</strong>.
+            Ofrecemos <strong className="text-white">terrenos puestos en aportación</strong> para desarrolladores de <strong className="text-white">plazas comerciales, parques industriales, proyectos residenciales y desarrollo vertical</strong>. Aportación flexible del <strong className="text-gold-400">50% al 95%</strong>.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start gap-3 mb-12">
@@ -274,7 +274,7 @@ function Hero() {
               Contáctanos por WhatsApp
             </a>
             <a href="#portafolio" className="btn-outline-gold !border-white/20 !text-white hover:!bg-white/5 hover:!border-gold-500 hover:!text-gold-400 flex items-center gap-2 !px-8 !py-4">
-              Ver Proyectos
+              Ver Terrenos Disponibles
               <IconChevronDown />
             </a>
           </div>
@@ -283,8 +283,8 @@ function Hero() {
           <div className="grid grid-cols-3 gap-6 max-w-lg">
             {[
               { num: '20+', label: 'Años de Experiencia' },
-              { num: '4', label: 'Tipos de Desarrollo' },
-              { num: '40-90%', label: 'Aportación Flexible' },
+              { num: '50-95%', label: 'Aportación' },
+              { num: '4', label: 'Giros de Desarrollo' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
                 <div className="font-display text-3xl md:text-4xl font-bold text-gradient-gold">{stat.num}</div>
@@ -321,17 +321,17 @@ function TerrenoBanner() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gold-500/[0.06] rounded-full blur-3xl" />
       <div className={`relative max-w-5xl mx-auto px-4 md:px-8 text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
         <div className="inline-block mb-6 px-5 py-2 bg-gold-500/20 border border-gold-500/30 rounded-full">
-          <span className="text-gold-400 text-sm font-bold tracking-[0.15em] uppercase">Terrenos en Aportación</span>
+          <span className="text-gold-400 text-sm font-bold tracking-[0.15em] uppercase">Para Desarrolladores Inmobiliarios</span>
         </div>
         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mb-6">
-          ¿Tienes un terreno de cualquier medida <br className="hidden md:block" />
-          y <span className="text-gradient-gold">no lo puedes vender</span>?
+          ¿Buscas terreno para tu <br className="hidden md:block" />
+          <span className="text-gradient-gold">próximo desarrollo</span>?
         </h2>
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-4 leading-relaxed">
-          No lo dejes parado. <strong className="text-white">Puedes invertirlo en aportación</strong> y obtener rendimientos a través de un desarrollo inmobiliario.
+          <strong className="text-white">Te ofrecemos terrenos puestos en aportación</strong> para que inicies tu proyecto sin necesidad de comprar el terreno.
         </p>
         <p className="text-base text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Desarrollamos <strong className="text-gold-400">plazas comerciales</strong>, <strong className="text-gold-400">proyectos residenciales</strong>, <strong className="text-gold-400">naves industriales</strong> y <strong className="text-gold-400">desarrollo vertical</strong> sobre tu terreno.
+          Terrenos disponibles para <strong className="text-gold-400">plazas comerciales</strong>, <strong className="text-gold-400">parques industriales</strong>, <strong className="text-gold-400">proyectos residenciales</strong> y <strong className="text-gold-400">desarrollo vertical</strong> con aportación del 50% al 95%.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
@@ -341,7 +341,7 @@ function TerrenoBanner() {
             className="btn-gold flex items-center gap-3 !px-10 !py-4 text-lg animate-pulse-gold"
           >
             <IconPhone className="w-6 h-6" />
-            Escríbenos por WhatsApp
+            Solicita Terrenos por WhatsApp
           </a>
           <a href={`tel:+523349687589`} className="flex items-center gap-2 text-gray-300 hover:text-gold-400 transition-colors text-lg font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -361,27 +361,27 @@ function PortfolioSection() {
   const projects = [
     {
       icon: <IconShoppingBag />,
-      title: 'Terreno en Aportación para Plaza Comercial',
-      description: '¿Tienes un terreno en zona de alto tráfico? Conviértelo en una plaza comercial rentable. Desarrollamos centros retail de 20,000 a 100,000 m² con ocupación del 95%+.',
-      aportacion: '40% - 90%',
+      title: 'Terrenos para Plaza Comercial',
+      description: 'Terrenos en aportación ubicados en zonas de alto tráfico, ideales para desarrollar centros retail y plazas comerciales de 20,000 a 100,000 m².',
+      aportacion: '50% - 95%',
       roi: '14-20% anual',
       image: '/plaza.png',
       tag: 'Comercial',
     },
     {
       icon: <IconBuilding />,
-      title: 'Terreno en Aportación para Desarrollo Vertical',
-      description: '¿Tu terreno está en zona urbana de alto valor? Aporta tu terreno para torres residenciales o corporativas de 15 a 35 pisos con amenidades premium.',
-      aportacion: '40% - 90%',
+      title: 'Terrenos para Desarrollo Vertical',
+      description: 'Terrenos en aportación en zonas urbanas de alto valor, perfectos para torres residenciales o corporativas de 15 a 35 pisos con máxima rentabilidad.',
+      aportacion: '50% - 95%',
       roi: '15-22% anual',
       image: '/tower.png',
       tag: 'Residencial / Vertical',
     },
     {
       icon: <IconWarehouse />,
-      title: 'Terreno en Aportación para Nave Industrial',
-      description: '¿Tienes un terreno en corredor logístico? Transfórmalo en bodegas o naves industriales de clase mundial. Proyectos de 5,000 a 50,000 m² en ubicaciones estratégicas.',
-      aportacion: '40% - 90%',
+      title: 'Terrenos para Parque Industrial',
+      description: 'Terrenos en aportación en corredores logísticos estratégicos, listos para desarrollar bodegas y naves industriales de 5,000 a 50,000 m².',
+      aportacion: '50% - 95%',
       roi: '12-18% anual',
       image: '/warehouse.png',
       tag: 'Industrial',
@@ -392,13 +392,13 @@ function PortfolioSection() {
     <section id="portafolio" className="section-padding bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Terrenos en Aportación</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Terrenos Disponibles en Aportación</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            ¿Para Qué Tipo de Desarrollo?
+            Terrenos para tu Desarrollo
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Tu terreno puede convertirse en un proyecto de alto rendimiento. Elige el tipo de desarrollo que mejor se adapte a tu propiedad.
+            Contamos con terrenos en aportación listos para ser desarrollados. Elige el giro que se adapte a tu proyecto.
           </p>
         </div>
 
@@ -453,7 +453,7 @@ function PortfolioSection() {
                   className="inline-flex items-center gap-2 text-[#25D366] font-semibold hover:text-[#1da851] transition-colors group/link text-sm"
                 >
                   <IconPhone className="w-4 h-4" />
-                  Consultar por WhatsApp
+                  Solicitar Terreno por WhatsApp
                   <span className="group-hover/link:translate-x-1 transition-transform"><IconArrowRight className="w-4 h-4" /></span>
                 </a>
               </div>
@@ -468,14 +468,26 @@ function PortfolioSection() {
 /* ─────────────── COMPLETED PROJECTS ─────────────── */
 function CompletedProjects() {
   const [ref, inView] = useInView();
+  const [selectedProject, setSelectedProject] = useState(null);
+
   const projects = [
     {
       name: 'Complejo Logístico Guadalajara',
-      type: 'Bodegas',
+      type: 'Parque Industrial',
       image: '/warehouse.png',
       area: '45,000 m²',
       inversion: '$12.5M',
       roi: '16% anual',
+      deal: {
+        aportacion: '70%',
+        valorTerreno: '$8.75M',
+        inversionDesarrollador: '$3.75M',
+        ubicacion: 'Corredor Industrial El Salto, Jalisco',
+        tiempoDesarrollo: '18 meses',
+        situacionInicial: 'Terreno de 6 hectáreas sin uso en zona industrial. El propietario no lograba venderlo desde hacía 3 años.',
+        comoFunciono: 'El terreno se aportó al 70% del valor total del proyecto. El desarrollador destinó su capital 100% a construcción de 12 naves industriales. Hoy tiene ocupación del 98% con contratos a 5 años.',
+        resultado: 'El propietario del terreno recibe el 70% de las utilidades del arrendamiento. El desarrollador recuperó su inversión en 2.5 años.',
+      },
     },
     {
       name: 'Plaza Comercial Punto Real',
@@ -484,6 +496,16 @@ function CompletedProjects() {
       area: '65,000 m²',
       inversion: '$28.3M',
       roi: '18% anual',
+      deal: {
+        aportacion: '60%',
+        valorTerreno: '$17M',
+        inversionDesarrollador: '$11.3M',
+        ubicacion: 'Zona Zapopan Norte, Jalisco',
+        tiempoDesarrollo: '24 meses',
+        situacionInicial: 'Terreno de 4.5 hectáreas en avenida principal. Ideal para comercio pero el propietario no contaba con capital para desarrollar.',
+        comoFunciono: 'El terreno cubrió el 60% del valor del proyecto. El desarrollador invirtió en la construcción de 85 locales comerciales, food court y estacionamiento para 400 vehículos.',
+        resultado: 'Plaza con 95% de ocupación a 6 meses de la apertura. Rentas mensuales distribuidas 60/40 entre propietario y desarrollador.',
+      },
     },
     {
       name: 'Torre Mixta Residencial-Corporativa',
@@ -492,14 +514,34 @@ function CompletedProjects() {
       area: '32,500 m²',
       inversion: '$45.7M',
       roi: '20% anual',
+      deal: {
+        aportacion: '55%',
+        valorTerreno: '$25.1M',
+        inversionDesarrollador: '$20.6M',
+        ubicacion: 'Puerta de Hierro, Guadalajara',
+        tiempoDesarrollo: '30 meses',
+        situacionInicial: 'Terreno premium de 3,200 m² en zona de alto valor. El propietario buscaba maximizar el retorno sin vender a precio de oportunidad.',
+        comoFunciono: 'El terreno se aportó al 55% del proyecto. El desarrollador construyó una torre de 28 pisos: 20 pisos residenciales (180 departamentos) y 8 pisos corporativos.',
+        resultado: 'Pre-venta del 85% antes de terminar construcción. El propietario del terreno recibió departamentos y oficinas equivalentes al 55% del valor total.',
+      },
     },
     {
       name: 'Coto Residencial Altavista',
-      type: 'Coto de Casas',
+      type: 'Residencial',
       image: '/coto.png',
       area: '18 hectáreas',
       inversion: '$35.2M',
       roi: '17% anual',
+      deal: {
+        aportacion: '75%',
+        valorTerreno: '$26.4M',
+        inversionDesarrollador: '$8.8M',
+        ubicacion: 'Tlajomulco de Zúñiga, Jalisco',
+        tiempoDesarrollo: '36 meses (3 fases)',
+        situacionInicial: 'Terreno ejidal de 18 hectáreas ya regularizado. El propietario no encontraba comprador al precio justo del terreno.',
+        comoFunciono: 'El terreno cubrió el 75% del proyecto. El desarrollador construyó 240 casas en 3 etapas, con amenidades: alberca, palapa, áreas verdes y seguridad 24/7.',
+        resultado: 'Las 3 fases se vendieron en menos de 24 meses. El propietario recibió el equivalente al 75% de las ventas totales, superando ampliamente el valor de mercado del terreno.',
+      },
     },
   ];
 
@@ -511,13 +553,13 @@ function CompletedProjects() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Terrenos que ya Fueron Aportados</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Casos de Éxito</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mt-3 mb-5">
-            Proyectos Realizados en Aportación
+            Desarrollos con Terrenos en Aportación
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Terrenos que propietarios como tú decidieron invertir en aportación y hoy generan rendimientos
+            Proyectos que desarrolladores realizaron con nuestros terrenos en aportación
           </p>
         </div>
 
@@ -563,20 +605,124 @@ function CompletedProjects() {
                   ))}
                 </div>
 
-                <a
-                  href={WA_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors mt-4 text-sm group/link"
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors mt-4 text-sm group/link cursor-pointer"
                 >
-                  Solicitar Detalles
+                  Ver más
                   <span className="group-hover/link:translate-x-1 transition-transform"><IconArrowRight className="w-4 h-4" /></span>
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* ─── DEAL DETAIL MODAL ─── */}
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          {/* Backdrop */}
+          <div className="absolute inset-0 bg-dark-900/80 backdrop-blur-sm" />
+
+          {/* Modal */}
+          <div
+            className="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slide-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header image */}
+            <div className="relative h-48 overflow-hidden rounded-t-3xl">
+              <img src={selectedProject.image} alt={selectedProject.name} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/80 to-transparent" />
+              <div className="absolute bottom-4 left-6 right-6">
+                <div className="inline-block px-3 py-1 bg-gold-500/20 backdrop-blur-sm border border-gold-500/30 rounded-full mb-2">
+                  <span className="text-gold-400 text-xs font-semibold">{selectedProject.type}</span>
+                </div>
+                <h3 className="font-display text-2xl font-bold text-white">{selectedProject.name}</h3>
+              </div>
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full bg-dark-900/50 backdrop-blur-sm flex items-center justify-center text-white hover:bg-dark-900/70 transition-colors"
+              >
+                <IconX />
+              </button>
+            </div>
+
+            {/* Deal content */}
+            <div className="p-6 md:p-8">
+              {/* Key metrics row */}
+              <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="bg-gold-50 rounded-xl p-3 text-center border border-gold-100">
+                  <p className="text-[10px] text-gold-600 font-semibold uppercase tracking-wider">Aportación</p>
+                  <p className="text-gold-700 font-bold text-lg">{selectedProject.deal.aportacion}</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100">
+                  <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Valor Terreno</p>
+                  <p className="text-dark-800 font-bold text-lg">{selectedProject.deal.valorTerreno}</p>
+                </div>
+                <div className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100">
+                  <p className="text-[10px] text-gray-500 font-semibold uppercase tracking-wider">Inv. Desarrollador</p>
+                  <p className="text-dark-800 font-bold text-lg">{selectedProject.deal.inversionDesarrollador}</p>
+                </div>
+              </div>
+
+              {/* Info rows */}
+              <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                <IconLocation />
+                <span className="font-semibold">{selectedProject.deal.ubicacion}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-600 mb-6">
+                <IconClock />
+                <span>Tiempo de desarrollo: <strong>{selectedProject.deal.tiempoDesarrollo}</strong></span>
+              </div>
+
+              {/* Deal story */}
+              <div className="space-y-5">
+                <div>
+                  <h4 className="font-display text-sm font-bold text-dark-800 uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs font-bold">1</span>
+                    Situación Inicial del Terreno
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed pl-8">{selectedProject.deal.situacionInicial}</p>
+                </div>
+
+                <div>
+                  <h4 className="font-display text-sm font-bold text-dark-800 uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-gold-500/20 flex items-center justify-center text-gold-600 text-xs font-bold">2</span>
+                    Cómo Funcionó la Aportación
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed pl-8">{selectedProject.deal.comoFunciono}</p>
+                </div>
+
+                <div>
+                  <h4 className="font-display text-sm font-bold text-dark-800 uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs font-bold">✓</span>
+                    Resultado
+                  </h4>
+                  <p className="text-gray-600 text-sm leading-relaxed pl-8">{selectedProject.deal.resultado}</p>
+                </div>
+              </div>
+
+              {/* CTA */}
+              <div className="mt-8 pt-6 border-t border-gray-100">
+                <p className="text-gray-500 text-sm mb-4 text-center">¿Te interesa un esquema similar para tu desarrollo?</p>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-3 py-3.5 text-base font-bold rounded-xl text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                  style={{ backgroundColor: '#25D366' }}
+                >
+                  <IconPhone className="w-5 h-5" />
+                  Platiquemos por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -586,35 +732,35 @@ function AdvantageSection() {
   const [ref, inView] = useInView();
   
   const udgaFeatures = [
-    { title: 'Aportación Flexible 40-90%', desc: 'Adapta tu inversión a tu capacidad y perfil de riesgo' },
-    { title: 'Control Participativo', desc: 'Voto en decisiones clave y acceso a junta directiva' },
-    { title: 'Retornos Competitivos', desc: '12-22% anual según tipo de proyecto y aportación' },
-    { title: 'Transparencia Total', desc: 'Reportes mensuales, auditorías independientes y portal digital' },
+    { title: 'Terrenos Listos para Desarrollar', desc: 'Terrenos en aportación del 50% al 95%, sin necesidad de compra directa' },
+    { title: 'Inicio Rápido de Proyecto', desc: 'Terrenos con documentación legal completa y listos para escriturar' },
+    { title: 'Sin Inversión en Tierra', desc: 'Destina tu capital 100% a la construcción y desarrollo del proyecto' },
+    { title: 'Flexibilidad de Aportación', desc: 'Esquemas personalizados del 50% al 95% según el tipo de desarrollo' },
   ];
 
   const traditionalFeatures = [
-    { title: 'Aportación Fija', desc: 'Opciones limitadas y rígidas sin flexibilidad' },
-    { title: 'Control Limitado', desc: 'Decisiones centralizadas sin participación' },
-    { title: 'Retornos Estándar', desc: '8-12% anual con márgenes predeterminados' },
-    { title: 'Poca Transparencia', desc: 'Reportes anuales y acceso limitado a información' },
+    { title: 'Compra Directa del Terreno', desc: 'Alto desembolso inicial que limita tu capacidad de desarrollo' },
+    { title: 'Trámites Prolongados', desc: 'Meses de negociación y due diligence con propietarios' },
+    { title: 'Capital Dividido', desc: 'Inversión fuerte en tierra que reduce presupuesto de construcción' },
+    { title: 'Esquemas Rígidos', desc: 'Pocas opciones de negociación y condiciones inflexibles' },
   ];
 
   return (
     <section id="ventajas" className="section-padding bg-gradient-to-b from-gray-50 to-white" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Ventaja Competitiva</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Ventaja para Desarrolladores</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            ¿Por Qué Aportar tu Terreno con UDGA?
+            ¿Por Qué Trabajar con UDGÅ Capital?
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            En lugar de dejar tu terreno sin producir, conviértelo en un desarrollo rentable con nuestro modelo de aportación
+            Desarrolla sin comprar terreno. Nuestros terrenos en aportación te permiten enfocar tu capital en construir.
           </p>
         </div>
 
         <div className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '200ms' }}>
-          {/* UDGA Column */}
+          {/* UDGÅ Column */}
           <div className="bg-white rounded-3xl border-2 border-gold-500 p-8 md:p-10 shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
             <div className="relative">
@@ -623,7 +769,7 @@ function AdvantageSection() {
                   <IconCheck className="w-7 h-7" />
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl font-bold text-dark-800">UDGA Capital</h3>
+                  <h3 className="font-display text-2xl font-bold text-dark-800">UDGÅ Capital</h3>
                 </div>
               </div>
               <div className="space-y-5">
@@ -649,7 +795,7 @@ function AdvantageSection() {
                 <IconX />
               </div>
               <div>
-                <h3 className="font-display text-2xl font-bold text-gray-400">Mercado Tradicional</h3>
+                <h3 className="font-display text-2xl font-bold text-gray-400">Compra Tradicional</h3>
               </div>
             </div>
             <div className="space-y-5">
@@ -679,24 +825,24 @@ function InvestmentModel() {
 
   const tiers = [
     {
-      pct: '40%',
-      label: 'Aportación Mínima',
-      desc: 'Ideal para inversores que buscan diversificar con menor capital. Retorno esperado: 12-14% anual.',
-      profile: 'CONSERVADOR',
+      pct: '50%',
+      label: 'Aportación Base',
+      desc: 'Terreno aportado al 50% del valor del proyecto. Ideal para desarrollos de gran escala donde el desarrollador aporta capital significativo.',
+      profile: 'GRAN ESCALA',
       popular: false,
     },
     {
-      pct: '65%',
-      label: 'Aportación Equilibrada',
-      desc: 'Balance perfecto entre control, rentabilidad y riesgo. Retorno esperado: 15-18% anual.',
-      profile: 'MODERADO',
+      pct: '75%',
+      label: 'Aportación Estándar',
+      desc: 'El esquema más solicitado. El terreno cubre el 75% y el desarrollador enfoca su capital en construcción y operación.',
+      profile: 'MÁS SOLICITADO',
       popular: true,
     },
     {
-      pct: '90%',
+      pct: '95%',
       label: 'Aportación Máxima',
-      desc: 'Para inversores con capital disponible y visión de largo plazo. Retorno esperado: 18-22% anual.',
-      profile: 'AGRESIVO',
+      desc: 'Para desarrolladores que buscan iniciar con mínima inversión en tierra. El terreno cubre casi la totalidad del valor del suelo.',
+      profile: 'MÁXIMO APALANCAMIENTO',
       popular: false,
     },
   ];
@@ -704,23 +850,23 @@ function InvestmentModel() {
   const steps = [
     {
       num: '01',
-      title: 'Evaluación Integral',
-      desc: 'Análisis exhaustivo de viabilidad técnica, financiera y de mercado. Valuación profesional y proyecciones conservadoras de rentabilidad.',
+      title: 'Presenta tu Proyecto',
+      desc: 'Cuéntanos qué tipo de desarrollo buscas: plaza comercial, parque industrial, residencial o vertical. Te mostramos terrenos compatibles.',
     },
     {
       num: '02',
-      title: 'Estructura Personalizada',
-      desc: 'Definición de aportación (40-90%), términos de inversión y calendario de retornos según perfil de riesgo del inversionista.',
+      title: 'Selección del Terreno',
+      desc: 'Elige entre nuestros terrenos disponibles en aportación. Te entregamos valuación, documentación legal y factibilidad del terreno.',
     },
     {
       num: '03',
-      title: 'Ejecución Transparente',
-      desc: 'Reportes mensuales detallados, auditorías independientes y acceso a portal digital para seguimiento en tiempo real del proyecto.',
+      title: 'Estructura del Acuerdo',
+      desc: 'Definimos el porcentaje de aportación (50-95%), los términos de participación y el calendario del proyecto.',
     },
     {
       num: '04',
-      title: 'Retornos Garantizados',
-      desc: 'Distribución de ganancias conforme a acuerdos, con opciones de reinversión o salida del proyecto según términos pactados.',
+      title: 'Inicio del Desarrollo',
+      desc: 'Con el terreno asegurado en aportación, el desarrollador inicia la construcción enfocando su capital al 100% en el proyecto.',
     },
   ];
 
@@ -731,13 +877,13 @@ function InvestmentModel() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Modelo de Aportación de Terrenos</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Modelo de Aportación</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-white mt-3 mb-5">
-            ¿Cómo Funciona la Aportación?
+            ¿Cómo Funciona para el Desarrollador?
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            Tu terreno se convierte en tu inversión. Elige el porcentaje de aportación que se ajuste a tu situación.
+            Nosotros ponemos el terreno en aportación, tú pones el desarrollo. Elige el porcentaje que mejor se ajuste a tu proyecto.
           </p>
         </div>
 
@@ -777,7 +923,7 @@ function InvestmentModel() {
         {/* Process Steps */}
         <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style={{ transitionDelay: '400ms' }}>
           <h3 className="font-display text-2xl md:text-3xl font-bold text-white text-center mb-12">
-            Proceso de Inversión
+            Conoce el proceso
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
@@ -801,22 +947,22 @@ function Testimonials() {
   const [ref, inView] = useInView();
   const testimonials = [
     {
-      name: 'Lic. Carlos Mendoza',
-      role: 'Empresario, Guadalajara',
-      aportacion: '65%',
-      text: 'Invertí con UDGA Capital en un proyecto de bodegas. La flexibilidad de aportación y el retorno del 16% anual superó mis expectativas. Equipo muy profesional.',
+      name: 'Arq. Carlos Mendoza',
+      role: 'Desarrollador de Plazas Comerciales, Guadalajara',
+      aportacion: '75%',
+      text: 'Gracias a UDGÅ Capital conseguí un terreno en aportación del 75% para mi plaza comercial. Pude enfocar todo mi capital en construcción y ya tenemos 95% de ocupación.',
     },
     {
       name: 'Ing. Patricia Gómez',
-      role: 'Directora Financiera, Empresa Multinacional',
-      aportacion: '40%',
-      text: 'Como inversora institucional, valoro la transparencia y reportes mensuales de UDGA. El proyecto de desarrollo vertical entregó a tiempo y con márgenes superiores.',
+      role: 'CEO, Constructora de Parques Industriales',
+      aportacion: '60%',
+      text: 'Como desarrolladora de naves industriales, encontrar terreno en aportación fue un game changer. UDGÅ nos facilitó la ubicación ideal en corredor logístico sin desembolso de tierra.',
     },
     {
-      name: 'Dr. Roberto Sánchez',
-      role: 'Inversionista Privado, Jalisco',
+      name: 'Arq. Roberto Sánchez',
+      role: 'Director de Desarrollo Vertical, Jalisco',
       aportacion: '90%',
-      text: 'Participé con aportación máxima en plaza comercial. El control sobre decisiones y los retornos del 19% anual hacen que sea mi socio preferido en inmobiliario.',
+      text: 'Desarrollé una torre de 25 pisos con terreno al 90% en aportación. Toda mi inversión fue a construcción. UDGÅ Capital es el socio ideal para desarrolladores ambiciosos.',
     },
   ];
 
@@ -824,9 +970,9 @@ function Testimonials() {
     <section className="section-padding bg-gradient-to-b from-white to-gray-50" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Casos de Éxito</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Desarrolladores Satisfechos</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            Lo Que Dicen Nuestros Inversores
+            Lo Que Dicen los Desarrolladores
           </h2>
           <div className="gold-divider mx-auto" />
         </div>
@@ -889,7 +1035,7 @@ function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Build WhatsApp message from form data
-    const msg = `Hola, me interesa información sobre terrenos en aportación con UDGA Capital.%0A%0ANombre: ${formData.nombre}%0AEmail: ${formData.email}%0ATeléfono: ${formData.telefono}%0AInterés: ${formData.interes}%0AMensaje: ${formData.mensaje}`;
+    const msg = `Hola, soy desarrollador y me interesan los terrenos en aportación de UDGÅ Capital.%0A%0ANombre: ${formData.nombre}%0AEmail: ${formData.email}%0ATeléfono: ${formData.telefono}%0AGiro: ${formData.interes}%0AMensaje: ${formData.mensaje}`;
     window.open(`https://wa.me/523349687589?text=${msg}`, '_blank');
   };
 
@@ -897,13 +1043,13 @@ function ContactSection() {
     <section id="contacto" className="section-padding bg-white" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">Próximo Paso</span>
+          <span className="text-gold-500 text-sm font-semibold tracking-[0.2em] uppercase">¿Eres Desarrollador?</span>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-dark-800 mt-3 mb-5">
-            Aporta tu Terreno Hoy
+            Solicita Terrenos en Aportación
           </h2>
           <div className="gold-divider mx-auto" />
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto">
-            Completa el formulario o escríbenos directo por <strong className="text-[#25D366]">WhatsApp</strong> para una consultoría personalizada
+            Cuéntanos sobre tu proyecto y te conectamos con terrenos disponibles. Escríbenos por <strong className="text-[#25D366]">WhatsApp</strong> para respuesta inmediata.
           </p>
         </div>
 
@@ -955,11 +1101,11 @@ function ContactSection() {
           {/* Contact Form */}
           <div className="lg:col-span-3">
             <div className="bg-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100">
-              <h3 className="font-display text-xl font-bold text-dark-800 mb-6">Solicita Información Personalizada</h3>
+              <h3 className="font-display text-xl font-bold text-dark-800 mb-6">Cuéntanos sobre tu Proyecto de Desarrollo</h3>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Nombre Completo</label>
+                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Nombre / Empresa</label>
                     <input
                       type="text"
                       name="nombre"
@@ -967,7 +1113,7 @@ function ContactSection() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-800 text-sm focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all"
-                      placeholder="Tu nombre"
+                      placeholder="Nombre o empresa desarrolladora"
                     />
                   </div>
                   <div>
@@ -997,19 +1143,19 @@ function ContactSection() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Tipo de Desarrollo para tu Terreno</label>
+                    <label className="block text-sm font-semibold text-dark-700 mb-1.5">Giro de Desarrollo</label>
                     <select
                       name="interes"
                       value={formData.interes}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-800 text-sm focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all appearance-none"
                     >
-                      <option value="">Seleccionar...</option>
+                      <option value="">Seleccionar giro...</option>
                       <option value="comercial">Plaza Comercial</option>
                       <option value="residencial">Residencial</option>
-                      <option value="industrial">Industrial / Bodegas</option>
+                      <option value="industrial">Parque Industrial / Bodegas</option>
                       <option value="vertical">Desarrollo Vertical</option>
-                      <option value="otro">Otro / No sé aún</option>
+                      <option value="otro">Otro giro</option>
                     </select>
                   </div>
                 </div>
@@ -1022,7 +1168,7 @@ function ContactSection() {
                     onChange={handleChange}
                     rows="4"
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-dark-800 text-sm focus:outline-none focus:border-gold-500 focus:ring-2 focus:ring-gold-500/20 transition-all resize-none"
-                    placeholder="Describe tu terreno: ubicación, medidas, situación actual..."
+                    placeholder="Describe tu proyecto: giro, tamaño estimado, zona de interés..."
                   ></textarea>
                 </div>
 
@@ -1048,10 +1194,10 @@ function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-3">
-              <img src="/udga_logo_white.png" alt="UDGA Capital" className="h-14 w-auto" />
+              <img src="/udga_logo_white.png" alt="UDGÅ Capital" className="h-14 w-auto" />
             </div>
             <p className="text-gray-500 leading-relaxed max-w-md mt-4">
-              Especialistas en terrenos en aportación. 20+ años transformando terrenos improductivos en desarrollos inmobiliarios rentables.
+              Ofrecemos terrenos en aportación a desarrolladores inmobiliarios. 20+ años facilitando el desarrollo de plazas comerciales, parques industriales y proyectos verticales.
             </p>
           </div>
 
@@ -1104,7 +1250,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            © 2026 UDGA Capital. Todos los derechos reservados.
+            © 2026 UDGÅ Capital. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6 text-gray-600 text-xs">
             <a href="#inicio" className="hover:text-gold-500 transition-colors">Privacidad</a>
@@ -1129,7 +1275,7 @@ function FloatingWhatsApp() {
     >
       {/* Label */}
       <span className="hidden sm:block bg-white text-dark-800 font-bold text-sm px-4 py-2.5 rounded-full shadow-xl border border-gray-100 group-hover:scale-105 transition-transform">
-        ¿Tienes un terreno? 💬
+        ¿Buscas terreno? 💬
       </span>
       {/* Button */}
       <div
@@ -1148,7 +1294,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero />
-      <TerrenoBanner />
+      {/* <TerrenoBanner /> */}
       <PortfolioSection />
       <CompletedProjects />
       <AdvantageSection />
